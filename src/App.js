@@ -36,14 +36,12 @@ const App = () => {
           }}
         >
           <Flex justify="space-between">
-            Logo
-            <HStack spacing="4">
+            <HStack spacing="5">
+              <Logo />
               {isDesktop && (
                 <ButtonGroup variant="ghost" spacing="1">
                   <Button>Home</Button>
                   <Button aria-current="page">Dashboard</Button>
-                  <Button>Tasks</Button>
-                  <Button>Bookmarks</Button>
                   <Button>Users</Button>
                 </ButtonGroup>
               )}
