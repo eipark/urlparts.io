@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import { ChakraProvider } from '@chakra-ui/react'
 import ForceLightMode from './ForceLightMode';
+import '@fontsource/inter/variable.css'
+
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
