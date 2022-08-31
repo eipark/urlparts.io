@@ -1,25 +1,23 @@
-import * as React from 'react'
 import {
-  Avatar,
   Box,
   Button,
   ButtonGroup,
   Container,
-  Flex,
+  Divider,
   HStack,
   IconButton,
   useBreakpointValue,
-  useColorModeValue,
 } from '@chakra-ui/react'
-import { FiHelpCircle, FiMenu, FiSearch, FiSettings } from 'react-icons/fi'
+import * as React from 'react'
+import { FiMenu } from 'react-icons/fi'
 import { Logo } from './Logo'
 
-const Nav = () => {
-//  const isDesktop = useBreakpointValue({
-//    base: false,
-//    lg: true,
-//  })
-  const isDesktop = true;
+const newsletterUrl = "https://parttimetech.substack.com/";
+const App = () => {
+  const isDesktop = useBreakpointValue({
+    base: false,
+    lg: true,
+  })
   return (
     <Box
       as="section"
@@ -28,31 +26,26 @@ const Nav = () => {
         md: '24',
       }}
     >
-      <Box as="nav" bg="bg-surface" boxShadow={useColorModeValue('sm', 'sm-dark')}>
-        <Container
-          py={{
-            base: '3',
-            lg: '4',
-          }}
-        >
-          <Flex justify="space-between">
-            <HStack spacing="5">
-              <Logo />
-              {isDesktop && (
-                <ButtonGroup variant="ghost" spacing="1">
-                  <Button>Home</Button>
-                  <Button aria-current="page">Dashboard</Button>
-                  <Button>Users</Button>
-                </ButtonGroup>
-              )}
-            </HStack>
+      <Box
+        as="nav"
+        bg="bg-surface"
+        py={{
+          base: '4',
+          lg: '5',
+        }}
+      >
+        <Container>
+          <HStack spacing="10" justify="space-between">
+            <Logo />
             {isDesktop ? (
-              <HStack spacing="4">
-                <ButtonGroup variant="ghost" spacing="1">
-                  <IconButton icon={<FiSearch fontSize="1.25rem" />} aria-label="Search" />
-                  <IconButton icon={<FiSettings fontSize="1.25rem" />} aria-label="Settings" />
-                  <IconButton icon={<FiHelpCircle fontSize="1.25rem" />} aria-label="Help Center" />
+              <HStack spacing="10">
+                <ButtonGroup variant="link" spacing="8">
+                  <Button>Jobs</Button>
+                  <Button onClick={() => {window.open(newsletterUrl, '_blank')}}>Newsletter</Button>
                 </ButtonGroup>
+                  <Button variant="primary" py="5" px="6" my="-5" borderRadius="3">
+                    Add your company
+                  </Button>
               </HStack>
             ) : (
               <IconButton
@@ -61,11 +54,11 @@ const Nav = () => {
                 aria-label="Open Menu"
               />
             )}
-          </Flex>
+          </HStack>
         </Container>
       </Box>
+      <Divider />
     </Box>
   )
 }
-export default Nav;
-
+export default App;
