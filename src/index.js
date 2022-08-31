@@ -4,14 +4,20 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import { ChakraProvider } from '@chakra-ui/react'
+import ForceLightMode from './ForceLightMode';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
-    <ColorModeScript />
-    <App />
+    <ChakraProvider>
+      <ForceLightMode>
+        <ColorModeScript initialColorMode='light' />
+          <App />
+      </ ForceLightMode>
+    </ChakraProvider>
   </StrictMode>
 );
 
@@ -24,3 +30,4 @@ serviceWorker.unregister();
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
