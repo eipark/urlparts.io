@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import { ChakraProvider } from '@chakra-ui/react'
 import ForceLightMode from './ForceLightMode';
 import '@fontsource/inter/variable.css'
+import { theme } from '@chakra-ui/pro-theme'
 
 
 const container = document.getElementById('root');
@@ -14,7 +15,7 @@ const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <ForceLightMode>
         <ColorModeScript initialColorMode='light' />
           <App />
