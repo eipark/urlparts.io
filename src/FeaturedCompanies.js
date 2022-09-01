@@ -60,8 +60,8 @@ const companies = [
 const FeaturedCompanies = () => (
   <Container
     py={{
-      base: '16',
-      md: '24',
+      base: '4',
+      md: '8',
     }}
   >
     <Stack
