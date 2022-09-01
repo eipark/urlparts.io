@@ -7,7 +7,12 @@ import {
   HStack,
   IconButton,
   useBreakpointValue,
+  Link,
 } from '@chakra-ui/react'
+import {
+  Link as RouterLink,
+  NavLink
+} from "react-router-dom";
 import * as React from 'react'
 import { FiMenu } from 'react-icons/fi'
 import { Logo } from './Logo'
@@ -18,6 +23,9 @@ const App = () => {
     base: false,
     lg: true,
   })
+  const activeStyle = {
+    fontWeight: "bold",
+  };
   return (
     <Box
       as="section"
@@ -39,11 +47,34 @@ const App = () => {
             <Logo />
             {isDesktop ? (
               <HStack spacing="10">
-                <ButtonGroup variant="link" spacing="8">
-                  <Button>Jobs</Button>
-                  <Button>Companies</Button>
-                  <Button onClick={() => {window.open(newsletterUrl, '_blank')}}>Newsletter</Button>
-                </ButtonGroup>
+                  <Link 
+                    as={NavLink} 
+                    to=""
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : undefined
+                    }
+                  >
+                    Home
+                  </Link>
+                  <Link 
+                    as={NavLink} 
+                    to="jobs"
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : undefined
+                    }
+                  >
+                    Jobs
+                  </Link>
+                  <Link
+                    as={NavLink}
+                    to="companies"
+                    style={({ isActive }) =>
+                      isActive ? activeStyle : undefined
+                    }
+                  >
+                    Companies
+                  </Link>
+                  <Link href={newsletterUrl} target="_blank">Newsletter</Link>>
                   <Button variant="primary" py="5" px="6" my="-5" borderRadius="3">
                     Add your company
                   </Button>
