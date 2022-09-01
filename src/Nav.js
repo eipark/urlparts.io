@@ -38,8 +38,8 @@ const App = () => {
         as="nav"
         bg="bg-surface"
         py={{
-          base: '4',
-          lg: '5',
+          base: '0',
+          lg: '0',
         }}
       >
         <Container>
