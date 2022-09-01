@@ -34,7 +34,7 @@ const Hero = () => {
             <Heading
               as="h1"
               size="xl"
-              color={mode('blue.600', 'blue.300')}
+              color={mode('blue.600')}
               mt="8"
               fontWeight="extrabold"
               letterSpacing="tight"
