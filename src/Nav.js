@@ -56,15 +56,6 @@ const App = () => {
                   >
                     Home
                   </Link>
-                  <Link 
-                    as={NavLink}
-                    to="jobs"
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }
-                  >
-                    Jobs
-                  </Link>
                   <Link
                     as={NavLink}
                     to="companies"
@@ -72,12 +63,9 @@ const App = () => {
                       isActive ? activeStyle : undefined
                     }
                   >
-                    Companies
+                    For Companies
                   </Link>
-                  <Link href={newsletterUrl} target="_blank">Newsletter</Link>>
-                  <Button variant="primary" py="5" px="6" my="-5" borderRadius="3">
-                    Add your company
-                  </Button>
+                  <Link href={newsletterUrl} target="_blank">Blog</Link>>
               </HStack>
             ) : (
               <IconButton

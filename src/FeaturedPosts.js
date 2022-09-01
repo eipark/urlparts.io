@@ -16,21 +16,25 @@ import {
 } from '@chakra-ui/react'
 import * as React from 'react'
 
-const companies = [
+const posts = [
   {
     id: '1',
-    title: '2022 Developer Survey',
-    image: 'https://tinyurl.com/4wzh2ph9',
+    title: "The future of work isn't just remote, it's part-time",
+    url: "https://parttimetech.substack.com/p/the-future-of-work-isnt-just-remote?utm_source=pttsite",
+    imgUrl: "https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F9506dbf2-c1c7-4173-8340-fdb7a42b10bd_3026x1484.png"
   },
   {
     id: '2',
-    title: 'Women in Tech',
-    image: 'https://tinyurl.com/5czjdxj7',
+    title: "The Easiest Part-Time Tech Job to Get",
+    url: "https://parttimetech.substack.com/p/easiest-part-time-tech-job?utm_source=pttsite",
+    imgUrl: "https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F724b0f22-9ff0-49c5-ae6c-2ad28d63514d_888x499.jpeg"
   },
   {
     id: '3',
-    title: 'Women in Tech',
-    image: 'https://tinyurl.com/5czjdxj7',
+    title: "The future of work isn't just remote, it's part-time",
+    title: "Diversify your (work) portfolio",
+    url: "https://parttimetech.substack.com/p/diversify-your-work-portfolio?utm_source=pttsite",
+    imgUrl: "https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F2e008526-0047-46f3-8659-fb4d0990eb58_640x360.jpeg",
   },
 ]
 
@@ -56,7 +60,7 @@ const FeaturedPosts = () => (
           md: 'md',
         }}
       >
-        Learn
+        Read
       </Text>
       <SimpleGrid
         columns={{
@@ -68,7 +72,7 @@ const FeaturedPosts = () => (
         }}
         columnGap="8"
       >
-        {companies.map((post) => (
+        {posts.map((post) => (
           <Link
             key={post.id}
             _hover={{
@@ -87,16 +91,18 @@ const FeaturedPosts = () => (
               height="full"
             >
 
+              <Link href={post.url}>
                   <Box overflow="hidden">
                     <Image
-                      src={post.image}
+                      src={post.imgUrl}
                       alt={post.title}
                       width="full"
                       height="15rem"
                       objectFit="cover"
                     />
                   </Box>
-                  <Heading p="3" size="xs">{post.title}</Heading>
+                </Link>
+                  <Text p="3" fontWeight={"bold"}>{post.title}</Text>
             </Box>
           </Link>
         ))}
