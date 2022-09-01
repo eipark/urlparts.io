@@ -58,6 +58,8 @@ const Hero = () => {
           </Text>
         </Stack>
 
+        <input type="hidden" name="form-name" value="subscription" />
+
         <form name="subscription" method="POST" data-netlify="true">
           <Stack
             onSubmit={(e) => {
