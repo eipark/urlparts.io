@@ -14,8 +14,6 @@ export const Logo = props => {
       <Heading fontSize="xl">
         Part-Time Tech
       </Heading>
-
-
     </HStack>
   );
 };

@@ -53,8 +53,8 @@ const Hero = () => {
         </Heading>
         <Stack spacing={{ base: '4', md: '6' }} maxW={{ md: 'xl', lg: 'md', xl: 'xl' }}>
           <Text fontSize={{ base: 'lg', md: 'xl' }} color="muted">
-            You're good at your job, but you don't want to do it 40+ hours/week.
             We're connecting tech talent with top companies who want to hire part-time.
+            Achieve greater balance, find interesting roles, use your skills.
           </Text>
         </Stack>
 
@@ -77,7 +77,7 @@ const Hero = () => {
             />
 
             <Text fontSize="sm" textAlign={{ base: 'center', md: 'start' }} color="subtle">
-              Subscribe for insights on part-time tech and <br />future job openings. No spam, up to 2x/week.
+              Insights on part-time tech and curated jobs. No spam, up to 2x/week.
             </Text>
           </Stack>
           <Button size="lg" colorScheme="blue" type="submit">
