@@ -39,7 +39,7 @@ const Hero = () => {
               fontWeight="extrabold"
               letterSpacing="tight"
             >
-            Get a
+            Get curated
             <Text
               bgGradient='linear(to-l, #7928CA, #FF0080)'
               style={{display: "inline"}}
@@ -49,15 +49,14 @@ const Hero = () => {
             >
               &nbsp;part-time&nbsp;
             </Text>
-            job in tech.
+            jobs in tech.
         </Heading>
-        {/*
         <Stack spacing={{ base: '4', md: '6' }} maxW={{ md: 'xl', lg: 'md', xl: 'xl' }}>
           <Text fontSize={{ base: 'lg', md: 'xl' }} color="muted">
-            See curated part-time ~job~ openings or ~learn~ how to start your own part-time endeavor.
+            You're good at your job, but you don't want to do it 40+ hours/week.
+            We're connecting tech talent with top companies who want to hire part-time.
           </Text>
         </Stack>
-        */}
 
         <Stack
           as="form"
@@ -78,25 +77,14 @@ const Hero = () => {
             />
 
             <Text fontSize="sm" textAlign={{ base: 'center', md: 'start' }} color="subtle">
-            Get curated part-time jobs or learn how to start your own part-time endeavor. No spam, up to 2x/week.
+              Subscribe for insights on part-time tech and <br />future job openings. No spam, up to 2x/week.
             </Text>
           </Stack>
           <Button size="lg" colorScheme="blue" type="submit">
-            Sign up free
+            Subscribe
           </Button>
 
         </Stack>
-        <Stack>
-          <Button
-            size="lg"
-            colorScheme="blue"
-            variant="outline"
-            onClick={()=>{}}
-          >
-            See jobs 👇
-          </Button>
-        </Stack>
-
       </Stack>
     </Box>
   )
