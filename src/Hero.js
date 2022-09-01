@@ -15,39 +15,22 @@ import * as React from 'react'
 import { HiPlay } from 'react-icons/hi'
 const Hero = () => {
   return (
-    <Box as="section" bg={mode('gray.50', 'gray.800')} pt="16" pb="24">
-      <Box
-        maxW={{
-          base: 'xl',
-          md: '7xl',
-        }}
-        mx="auto"
-        px={{
-          base: '6',
-          md: '8',
-        }}
-      >
+    <Box as="section" pt="16" pb="24" bgGradient='linear(to-b, white, blue.100, red.100)' >
         <Stack
           direction={{
             base: 'column',
-            lg: 'row',
           }}
           spacing={{
             base: '3rem',
             lg: '2rem',
           }}
-          mt="8"
+          mt="0"
           align={{
             lg: 'center',
           }}
           justify="space-between"
+          textAlign="center"
         >
-          <Box
-            flex="1"
-            maxW={{
-              lg: '520px',
-            }}
-          >
             <Heading
               as="h1"
               size="xl"
@@ -59,21 +42,21 @@ const Hero = () => {
             Get a
             <Text
               bgGradient='linear(to-l, #7928CA, #FF0080)'
+              style={{display: "inline"}}
               bgClip='text'
               fontSize='6xl'
               fontWeight='extrabold'
             >
-              part-time
+              &nbsp;part-time&nbsp;
             </Text>
             job in tech.
-              </Heading>
+        </Heading>
+        <Stack spacing={{ base: '4', md: '6' }} maxW={{ md: 'xl', lg: 'md', xl: 'xl' }}>
+          <Text fontSize={{ base: 'lg', md: 'xl' }} color="muted">
+            See curated part-time ~job~ openings or ~learn~ how to start your own part-time endeavor.
+          </Text>
+        </Stack>
 
-
-
-
-
-            <Text color={mode('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
-            </Text>
         <Stack
           as="form"
           onSubmit={(e) => {
@@ -91,9 +74,12 @@ const Hero = () => {
               placeholder="Enter your email"
               autoComplete="false"
             />
+
+            {/*
             <Text fontSize="sm" textAlign={{ base: 'center', md: 'start' }} color="subtle">
-              Subscribe for job alerts and insights on part-time work in tech.
+            dfdfdf
             </Text>
+            */}
           </Stack>
           <Button size="lg" colorScheme="blue" type="submit">
             Subscribe
@@ -103,46 +89,7 @@ const Hero = () => {
         <Stack>
           <Button size="lg">See jobs 👇</Button>
         </Stack>
-            <Text mt="8" color={mode('gray.600', 'gray.400')}>
-              Not convinced about part-time work? 
-              <Link href="#" textDecoration="underline">Read why the future of work isn't just remote, it's part-time.
-              </Link>
-
-            </Text>
-          </Box>
-          <Box
-            pos="relative"
-            w={{
-              base: 'full',
-              lg: '360px',
-            }}
-            h={{
-              base: 'auto',
-              lg: '360px',
-            }}
-          >
-            <Img
-              w="full"
-              pos="relative"
-              zIndex="1"
-              h={{
-                lg: '100%',
-              }}
-              objectFit="cover"
-              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fGxhZHklMjB3aXRoJTIwbGFwdG9wfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-              alt="Screening talent"
-            />
-            <Box
-              pos="absolute"
-              w="100%"
-              h="100%"
-              top="-4"
-              left="-4"
-              bg={mode('gray.200', 'gray.700')}
-            />
-          </Box>
-        </Stack>
-      </Box>
+      </Stack>
     </Box>
   )
 }

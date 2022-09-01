@@ -41,6 +41,7 @@ const App = () => {
               <HStack spacing="10">
                 <ButtonGroup variant="link" spacing="8">
                   <Button>Jobs</Button>
+                  <Button>Companies</Button>
                   <Button onClick={() => {window.open(newsletterUrl, '_blank')}}>Newsletter</Button>
                 </ButtonGroup>
                   <Button variant="primary" py="5" px="6" my="-5" borderRadius="3">
