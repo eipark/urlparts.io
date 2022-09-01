@@ -1,20 +1,30 @@
-import * as React from 'react'
+import React, { StrictMode } from 'react';
+import {
+  ColorModeScript,
+  ChakraProvider,
+  Box,
+} from '@chakra-ui/react';
 import Nav from './Nav';
 import Hero from './Hero';
 import FeaturedCompanies from './FeaturedCompanies';
 import FeaturedPosts from './FeaturedPosts';
+import ForceLightMode from './ForceLightMode';
+import { theme } from '@chakra-ui/pro-theme'
 import {
-  Box,
-} from '@chakra-ui/react';
+  Outlet
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <Box>
-      <Nav />
-      <Hero />
-      <FeaturedCompanies />
-      <FeaturedPosts />
-    </Box>
+  <StrictMode>
+    <ChakraProvider theme={theme}>
+      <ForceLightMode>
+        <ColorModeScript initialColorMode='light' />
+        <Nav />
+        <Outlet />
+      </ ForceLightMode>
+    </ChakraProvider>
+  </StrictMode>
   );
 }
 
