@@ -56,7 +56,7 @@ const FeaturedPosts = () => (
           md: 'md',
         }}
       >
-        Featured Posts
+        Learn
       </Text>
       <SimpleGrid
         columns={{

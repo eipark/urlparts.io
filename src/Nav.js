@@ -47,8 +47,8 @@ const App = () => {
             <Logo />
             {isDesktop ? (
               <HStack spacing="10">
-                  <Link 
-                    as={NavLink} 
+                  <Link
+                    as={NavLink}
                     to=""
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined
@@ -57,7 +57,7 @@ const App = () => {
                     Home
                   </Link>
                   <Link 
-                    as={NavLink} 
+                    as={NavLink}
                     to="jobs"
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined

@@ -54,7 +54,7 @@ const Hero = () => {
         <Stack spacing={{ base: '4', md: '6' }} maxW={{ md: 'xl', lg: 'md', xl: 'xl' }}>
           <Text fontSize={{ base: 'lg', md: 'xl' }} color="muted">
             We're connecting tech talent with top companies who want to hire part-time.
-            Achieve greater balance, find interesting roles, use your skills.
+            Achieve greater balance through flexible and diverse roles.
           </Text>
         </Stack>
 

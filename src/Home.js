@@ -11,7 +11,6 @@ const Home = () => {
   return (
     <Box>
       <Hero />
-      <FeaturedCompanies />
       <FeaturedPosts />
     </Box>
   );
