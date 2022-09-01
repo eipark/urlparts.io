@@ -22,8 +22,8 @@ const App = () => {
     <Box
       as="section"
       pb={{
-        base: '12',
-        md: '24',
+        base: '0',
+        md: '0',
       }}
     >
       <Box

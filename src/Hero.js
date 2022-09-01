@@ -1,5 +1,6 @@
 import {
   Box,
+  Badge,
   Button,
   Heading,
   Img,
@@ -8,6 +9,7 @@ import {
   Text,
   useColorModeValue as mode,
   Input,
+  useBreakpointValue,
 } from '@chakra-ui/react'
 import * as React from 'react'
 import { HiPlay } from 'react-icons/hi'
@@ -46,7 +48,6 @@ const Hero = () => {
               lg: '520px',
             }}
           >
-
             <Heading
               as="h1"
               size="xl"
@@ -55,18 +56,16 @@ const Hero = () => {
               fontWeight="extrabold"
               letterSpacing="tight"
             >
-            
-            Find
-<Text
-  bgGradient='linear(to-l, #7928CA, #FF0080)'
-  bgClip='text'
-  fontSize='6xl'
-  fontWeight='extrabold'
->
-  part-time
-</Text>
-jobs in tech.
-
+            Get a
+            <Text
+              bgGradient='linear(to-l, #7928CA, #FF0080)'
+              bgClip='text'
+              fontSize='6xl'
+              fontWeight='extrabold'
+            >
+              part-time
+            </Text>
+            job in tech.
               </Heading>
 
 
@@ -75,20 +74,7 @@ jobs in tech.
 
             <Text color={mode('gray.600', 'gray.400')} mt="4" fontSize="lg" fontWeight="medium">
             </Text>
-            <Stack
-              direction={{
-                base: 'column',
-                md: 'row',
-              }}
-              spacing="4"
-              mt="8"
-            >
-              <Button size="lg" minW="210px" colorScheme="blue" height="14" px="8">
-                Get Started
-              </Button>
-
-            </Stack>
-                    <Stack
+        <Stack
           as="form"
           onSubmit={(e) => {
             e.preventDefault()
@@ -106,13 +92,16 @@ jobs in tech.
               autoComplete="false"
             />
             <Text fontSize="sm" textAlign={{ base: 'center', md: 'start' }} color="subtle">
-              Subscribe for the job alerts and the latest posts.
+              Subscribe for job alerts and insights on part-time work in tech.
             </Text>
           </Stack>
           <Button size="lg" colorScheme="blue" type="submit">
             Subscribe
           </Button>
 
+        </Stack>
+        <Stack>
+          <Button size="lg">See jobs 👇</Button>
         </Stack>
             <Text mt="8" color={mode('gray.600', 'gray.400')}>
               Not convinced about part-time work? 
@@ -125,11 +114,11 @@ jobs in tech.
             pos="relative"
             w={{
               base: 'full',
-              lg: '560px',
+              lg: '360px',
             }}
             h={{
               base: 'auto',
-              lg: '560px',
+              lg: '360px',
             }}
           >
             <Img
