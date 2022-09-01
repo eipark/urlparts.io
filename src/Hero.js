@@ -58,9 +58,10 @@ const Hero = () => {
           </Text>
         </Stack>
 
+        {/* need this for netlify form stuff https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/ */}
         <input type="hidden" name="form-name" value="subscription" />
 
-        <form name="subscription" method="POST" data-netlify="true">
+        <form name="subscription" method="post">
           <Stack
             onSubmit={(e) => {
               e.preventDefault()
