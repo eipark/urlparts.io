@@ -71,6 +71,7 @@ const Hero = () => {
                 <Input
                   size="lg"
                   type="email"
+                  name="email"
                   required
                   placeholder="Enter your email"
                   autoComplete="false"
