@@ -49,7 +49,7 @@ const Hero = () => {
             >
               &nbsp;part-time&nbsp;
             </Text>
-            jobs in tech.
+            <br />jobs in tech.
         </Heading>
         <Stack spacing={{ base: '4', md: '6' }} maxW={{ md: 'xl', lg: 'md', xl: 'xl' }}>
           <Text fontSize={{ base: 'lg', md: 'xl' }} color="muted">
@@ -58,33 +58,34 @@ const Hero = () => {
           </Text>
         </Stack>
 
-        <Stack
-          as="form"
-          onSubmit={(e) => {
-            e.preventDefault()
-          }}
-          direction={{ base: 'column', md: 'row' }}
-          spacing="4"
-          justify="center"
-        >
-          <Stack maxW={{ md: 'lg' }} width="full">
-            <Input
-              size="lg"
-              type="email"
-              required
-              placeholder="Enter your email"
-              autoComplete="false"
-            />
+        <form name="subscription" method="POST" data-netlify="true">
+          <Stack
+            onSubmit={(e) => {
+              e.preventDefault()
+            }}
+            direction={{ base: 'column', md: 'row' }}
+            spacing="4"
+            justify="center"
+          >
+            <Stack maxW={{ md: 'lg' }} width="full">
+                <Input
+                  size="lg"
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  autoComplete="false"
+                />
 
-            <Text fontSize="sm" textAlign={{ base: 'center', md: 'start' }} color="subtle">
-              Insights on part-time tech and curated jobs. No spam, up to 2x/week.
-            </Text>
+                <Text fontSize="sm" textAlign={{ base: 'center', md: 'start' }} color="subtle">
+                  Insights on part-time tech and curated jobs. No spam, up to 2x/week.
+                </Text>
+            </Stack>
+            <Button size="lg" colorScheme="blue" type="submit">
+              Subscribe
+            </Button>
           </Stack>
-          <Button size="lg" colorScheme="blue" type="submit">
-            Subscribe
-          </Button>
+        </form>
 
-        </Stack>
       </Stack>
     </Box>
   )
