@@ -51,11 +51,13 @@ const Hero = () => {
             </Text>
             job in tech.
         </Heading>
+        {/*
         <Stack spacing={{ base: '4', md: '6' }} maxW={{ md: 'xl', lg: 'md', xl: 'xl' }}>
           <Text fontSize={{ base: 'lg', md: 'xl' }} color="muted">
             See curated part-time ~job~ openings or ~learn~ how to start your own part-time endeavor.
           </Text>
         </Stack>
+        */}
 
         <Stack
           as="form"
@@ -75,20 +77,26 @@ const Hero = () => {
               autoComplete="false"
             />
 
-            {/*
             <Text fontSize="sm" textAlign={{ base: 'center', md: 'start' }} color="subtle">
-            dfdfdf
+            Get curated part-time jobs or learn how to start your own part-time endeavor. No spam, up to 2x/week.
             </Text>
-            */}
           </Stack>
           <Button size="lg" colorScheme="blue" type="submit">
-            Subscribe
+            Sign up free
           </Button>
 
         </Stack>
         <Stack>
-          <Button size="lg">See jobs 👇</Button>
+          <Button
+            size="lg"
+            colorScheme="blue"
+            variant="outline"
+            onClick={()=>{}}
+          >
+            See jobs 👇
+          </Button>
         </Stack>
+
       </Stack>
     </Box>
   )

@@ -1,13 +1,18 @@
 import * as React from 'react'
 import Nav from './Nav';
 import Hero from './Hero';
+import FeaturedCompanies from './FeaturedCompanies';
+import {
+  Box,
+} from '@chakra-ui/react';
 
 const App = () => {
   return (
-    <div>
+    <Box>
       <Nav />
       <Hero />
-    </div>
+      <FeaturedCompanies />
+    </Box>
   );
 }
 
