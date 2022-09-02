@@ -6,6 +6,7 @@ import {
   HStack,
   VStack,
 } from '@chakra-ui/react';
+import Languages from './Languages';
 import tlds from 'tlds';
 
 const getParsedUrlArray = (url) => {
@@ -70,6 +71,7 @@ const URLParts = ({url}) => {
       <HStack>
         {parsedUrlArray.map(renderPart)}
       </HStack>
+      <Languages url={url} />
     </Box>
   );
 };
