@@ -17,14 +17,10 @@ import { HiPlay } from 'react-icons/hi';
 import { isWebUri } from 'valid-url';
 import URLParts from './URLParts';
 
-const baseParser = (url) => {
-  return {
-  };
-}
-
 
 const Hero = () => {
   const [url, setUrl] = useState('https://www.urlparts.io');
+  // TODO: Should we just use built in URL object?
   const isValidUrl = !!isWebUri(url);
 
 
