@@ -2,8 +2,6 @@ import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import Home from './Home';
-import Companies from './Companies';
-import Company from './Company';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import '@fontsource/inter/variable.css'
@@ -23,9 +21,6 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
-        <Route path="companies" element={<Companies />}>
-          <Route path=":companyId" element={<Company />} />
-        </Route>
       </Route>
     </Routes>
   </BrowserRouter>

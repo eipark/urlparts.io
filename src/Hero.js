@@ -1,3 +1,5 @@
+import * as React from 'react'
+import { useState } from 'react';
 import {
   Box,
   Badge,
@@ -10,10 +12,22 @@ import {
   useColorModeValue as mode,
   Input,
   useBreakpointValue,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import { HiPlay } from 'react-icons/hi'
+} from '@chakra-ui/react';
+import { HiPlay } from 'react-icons/hi';
+import { isWebUri } from 'valid-url';
+import URLParts from './URLParts';
+
+const baseParser = (url) => {
+  return {
+  };
+}
+
+
 const Hero = () => {
+  const [url, setUrl] = useState('https://www.urlparts.io');
+  const isValidUrl = !!isWebUri(url);
+
+
   return (
     <Box as="section" pt="16" pb="24" bgGradient='linear(to-b, white, blue.100, red.100)' >
         <Stack
@@ -39,56 +53,22 @@ const Hero = () => {
               fontWeight="extrabold"
               letterSpacing="tight"
             >
-            Get curated
-            <Text
-              bgGradient='linear(to-l, #7928CA, #FF0080)'
-              style={{display: "inline"}}
-              bgClip='text'
-              fontSize='6xl'
-              fontWeight='extrabold'
-            >
-              &nbsp;part-time&nbsp;
-            </Text>
-            <br />jobs in tech.
-        </Heading>
-        <Stack spacing={{ base: '4', md: '6' }} maxW={{ md: 'xl', lg: 'md', xl: 'xl' }}>
-          <Text fontSize={{ base: 'lg', md: 'xl' }} color="muted">
-            We're connecting tech talent with top companies who want to hire part-time.
-            Achieve greater balance through flexible and diverse roles.
-          </Text>
-        </Stack>
-
-
-        <form name="subscription" method="post">
-          {/* need this for netlify form stuff https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/ */}
-          <input type="hidden" name="form-name" value="subscription" />
-          <Stack
-            onSubmit={(e) => {
-              e.preventDefault()
-            }}
-            direction={{ base: 'column', md: 'row' }}
-            spacing="4"
-            justify="center"
-          >
-            <Stack maxW={{ md: 'lg' }} width="full">
                 <Input
-                  size="lg"
-                  type="email"
+                  size="60px"
+                  type="text"
                   name="email"
+                  value={url}
                   required
-                  placeholder="Enter your email"
+                  isInvalid={!isValidUrl}
+    errorBorderColor='crimson'
                   autoComplete="false"
+                  onChange={e => setUrl(e.target.value)}
                 />
-
-                <Text fontSize="sm" textAlign={{ base: 'center', md: 'start' }} color="subtle">
-                  Insights on part-time tech and curated jobs. No spam, up to 2x/week.
-                </Text>
-            </Stack>
-            <Button size="lg" colorScheme="blue" type="submit">
-              Subscribe
-            </Button>
-          </Stack>
-        </form>
+            </Heading>
+            {isValidUrl ?
+              <URLParts url={url} /> :
+              <Text>Invalid URL</Text>
+            }
 
       </Stack>
     </Box>

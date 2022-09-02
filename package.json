@@ -1,5 +1,5 @@
 {
-  "name": "parttimetech",
+  "name": "urlparts.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +17,9 @@
     "react-icons": "^3.11.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "require-url": "^0.0.1",
+    "tlds": "^1.231.0",
+    "valid-url": "^1.0.9",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

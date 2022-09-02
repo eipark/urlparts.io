@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Button, Link,
 } from '@chakra-ui/react';
-import logoImg from "./img/logo.png";
 import {
   HStack,
   Heading,
@@ -22,9 +21,8 @@ export const Logo = props => {
         }}
       >
     <HStack>
-        <img src={logoImg}  width={"50px"}/>
         <Heading fontSize="xl">
-          Part-Time Tech
+          urlparts.io
         </Heading>
     </HStack>
       </Link>

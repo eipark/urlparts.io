@@ -6,8 +6,6 @@ import {
 } from '@chakra-ui/react';
 import Nav from './Nav';
 import Hero from './Hero';
-import FeaturedCompanies from './FeaturedCompanies';
-import FeaturedPosts from './FeaturedPosts';
 import ForceLightMode from './ForceLightMode';
 import { theme } from '@chakra-ui/pro-theme'
 import {

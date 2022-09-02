@@ -42,40 +42,11 @@ const App = () => {
           lg: '0',
         }}
       >
+
         <Container>
-          <HStack spacing="10" justify="space-between">
             <Logo />
-            {isDesktop ? (
-              <HStack spacing="10">
-                  <Link
-                    as={NavLink}
-                    to=""
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    as={NavLink}
-                    to="companies"
-                    style={({ isActive }) =>
-                      isActive ? activeStyle : undefined
-                    }
-                  >
-                    For Companies
-                  </Link>
-                  <Link href={newsletterUrl} target="_blank">Blog</Link>>
-              </HStack>
-            ) : (
-              <IconButton
-                variant="ghost"
-                icon={<FiMenu fontSize="1.25rem" />}
-                aria-label="Open Menu"
-              />
-            )}
-          </HStack>
         </Container>
+
       </Box>
       <Divider />
     </Box>
